@@ -76,7 +76,7 @@
       z-index: 9;
       text-align: center;
     }
-    nav a { color: #fff; margin-right: 2em;}
+    nav a { color: #fff; margin-right: 10px;}
   </style>
 </head>
 
@@ -86,6 +86,7 @@
     <a href="#s2">section2</a>
     <a href="#s3">section3</a>
   </nav>
+  
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <!-- end sw-wrapper-->
@@ -120,6 +121,12 @@
       mousewheelForceToAxis: true,
       speed: 600
     });
+
+    $('nav a').click(function(){
+      var i = $(this).index();
+      $('.swiper-pagination-bullet').eq(i).trigger('click');
+    })
+    
 
   </script>
 </body>
